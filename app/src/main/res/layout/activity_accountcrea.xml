@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Prenom"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="184dp"
+        android:layout_height="90dp"
+        android:text="Creation de compte"
+        app:layout_constraintEnd_toEndOf="@+id/editTextText"
+        app:layout_constraintStart_toStartOf="@+id/editTextText"
+        tools:layout_editor_absoluteY="54dp" />
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Nom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextText2"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:text="Email"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPostalAddress"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPostalAddress"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+
+    <EditText
+        android:id="@+id/editTextTextPostalAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="textPostalAddress"
+        android:text="Adresse"
+        app:layout_constraintEnd_toEndOf="@+id/editTextNumberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/editTextNumberDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+
+    <EditText
+        android:id="@+id/editTextNumberDecimal"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="Code postal"
+        app:layout_constraintEnd_toEndOf="@+id/editTextText3"
+        app:layout_constraintStart_toStartOf="@+id/editTextText3"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPostalAddress" />
+
+    <EditText
+        android:id="@+id/editTextText3"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Ville"
+        app:layout_constraintEnd_toEndOf="@+id/editTextNumberDecimal2"
+        app:layout_constraintStart_toStartOf="@+id/editTextNumberDecimal2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal" />
+
+    <EditText
+        android:id="@+id/editTextNumberDecimal2"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="Carte de fidélité"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText3"
+        tools:layout_editor_absoluteX="79dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="textView,editTextText,editTextTextEmailAddress,editTextText2,editTextText3,editTextTextPostalAddress,editTextNumberDecimal2,editTextNumberDecimal" />
+</androidx.constraintlayout.widget.ConstraintLayout>
