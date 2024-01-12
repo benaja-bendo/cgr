@@ -22,19 +22,19 @@
         android:layout_height="75dp"
         android:orientation="horizontal">
         <TextView
-            android:id="@+id/textViewTabFilms"
+            android:id="@+id/textViewFilms"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             style="@style/TextTabbar"
             android:text="@string/txtFilms"/>
         <TextView
-            android:id="@+id/textViewTabSalles"
+            android:id="@+id/textViewSalles"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             style="@style/TextTabbar"
             android:text="@string/txtSalles"/>
         <TextView
-            android:id="@+id/textViewTabCarte"
+            android:id="@+id/textViewCarte"
             style="@style/TextTabbar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
