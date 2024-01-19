@@ -4,6 +4,9 @@
     <string name="txtSalles">Salles</string>
     <string name="txtCarte">Carte</string>
     <string name="txtPanier">Panier</string>
+    <string name="txtDescription">Description :</string>
+    <string name="txtDuree">Durée :</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
