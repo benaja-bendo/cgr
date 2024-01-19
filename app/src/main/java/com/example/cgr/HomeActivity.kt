@@ -20,6 +20,24 @@ class HomeActivity : AppCompatActivity() {
         val carte = findViewById<TextView>(R.id.textViewCarte)
         val panier = findViewById<TextView>(R.id.textViewPanier)
 
+        showFilms()
+
+        films.setOnClickListener {
+            showFilms()
+        }
+
+        salles.setOnClickListener {
+            showSalles()
+        }
+
+        carte.setOnClickListener {
+            showCarte()
+        }
+
+        panier.setOnClickListener {
+            showPanier()
+        }
+    }
         fun showFilms(){
             val frManager=supportFragmentManager
             val fragmentTra= frManager.beginTransaction()
@@ -51,5 +69,4 @@ class HomeActivity : AppCompatActivity() {
             fragmentTra.replace(R.id.layoutContent,panierFragment)
             fragmentTra.commit()
         }
-    }
 }
