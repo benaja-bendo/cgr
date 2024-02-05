@@ -5,6 +5,7 @@
     <color name="white">#F5F5F5</color>
     <color name="holo_red_dark">#ffcc0000</color>
     <color name="purple">#9976AA</color>
+    <color name="black">#000000</color>
 
 
 </resources>

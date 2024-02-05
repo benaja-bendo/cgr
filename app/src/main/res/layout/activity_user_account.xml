@@ -12,8 +12,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-
-
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -24,7 +22,7 @@
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:hint="@string/txtLastName"
-                android:inputType="txtLastName"/>
+                android:inputType="text"/>
 
             <EditText
                 style="@style/EditTextName"
@@ -32,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:hint="@string/txtName"
-                android:inputType="txtName"/>
+                android:inputType="text"/>
 
             <EditText
                 style="@style/EditTextEmail"
@@ -40,15 +38,15 @@
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:hint="@string/txtEmail"
-                android:inputType="txtEmail"/>
+                android:inputType="text"/>
 
             <EditText
                 style="@style/EditTextAddress"
                 android:id="@+id/editTextTextAddress"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:hint="@string/textAddress"
-                android:inputType="txtAddress"/>
+                android:hint="@string/txtAddress"
+                android:inputType="text"/>
 
             <EditText
                 style="@style/EditTextZipCode"
@@ -56,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:hint="@string/txtZipCode"
-                android:inputType="txtZipCode"/>
+                android:inputType="text"/>
 
             <EditText
                 style="@style/EditTextCity"
@@ -64,7 +62,7 @@
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:hint="@string/txtCity"
-                android:inputType="txtCity"/>
+                android:inputType="text"/>
 
 
             <Button
@@ -75,5 +73,4 @@
                 android:layout_marginTop="150dp"
                 android:text="@string/txtUpdate"/>
         </ScrollView>
-
 </LinearLayout>

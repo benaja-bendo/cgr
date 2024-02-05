@@ -36,8 +36,5 @@ class UserAccountActivity : BaseActivity() {
                 Toast.LENGTH_LONG).show()
         })
 
-
-
-
     }
 }
