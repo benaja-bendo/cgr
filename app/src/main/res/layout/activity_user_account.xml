@@ -7,6 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".UserAccountActivity">
+
         <include
             layout="@layout/activity_base"
             android:layout_width="match_parent"
@@ -63,7 +64,6 @@
                 android:layout_width="match_parent"
                 android:hint="@string/txtCity"
                 android:inputType="text"/>
-
 
             <Button
                 android:id="@+id/buttonUpdate"
