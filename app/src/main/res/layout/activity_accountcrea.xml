@@ -1,108 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="55dp">
 
-    <EditText
-        android:id="@+id/editTextText2"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Prenom"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="184dp"
-        android:layout_height="90dp"
-        android:text="Creation de compte"
-        app:layout_constraintEnd_toEndOf="@+id/editTextText"
-        app:layout_constraintStart_toStartOf="@+id/editTextText"
-        tools:layout_editor_absoluteY="54dp" />
+        android:layout_width="250dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="25dp"
+        android:gravity="center"
+        android:text="Création de compte"
+        android:textSize="25dp"
+        android:textColor="@android:color/holo_blue_dark"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="16dp"/>
 
     <EditText
         android:id="@+id/editTextText"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
         android:ems="10"
         android:inputType="text"
         android:text="Nom"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextText2"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        tools:layout_editor_absoluteY="150dp" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:id="@+id/editTextText2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Prénom"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="210dp" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:ems="10"
         android:inputType="textEmailAddress"
         android:text="Email"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPostalAddress"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPostalAddress"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
-
-    <EditText
-        android:id="@+id/editTextTextPostalAddress"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:inputType="textPostalAddress"
-        android:text="Adresse"
-        app:layout_constraintEnd_toEndOf="@+id/editTextNumberDecimal"
-        app:layout_constraintStart_toStartOf="@+id/editTextNumberDecimal"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
-
-    <EditText
-        android:id="@+id/editTextNumberDecimal"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:text="Code postal"
-        app:layout_constraintEnd_toEndOf="@+id/editTextText3"
-        app:layout_constraintStart_toStartOf="@+id/editTextText3"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPostalAddress" />
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="270dp" />
 
     <EditText
         android:id="@+id/editTextText3"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Adresse"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="330dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPostalAddress"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:inputType="textPostalAddress"
+        android:text="Code postal"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="390dp" />
+
+    <EditText
+        android:id="@+id/editTextText4"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:ems="10"
         android:inputType="text"
         android:text="Ville"
-        app:layout_constraintEnd_toEndOf="@+id/editTextNumberDecimal2"
-        app:layout_constraintStart_toStartOf="@+id/editTextNumberDecimal2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal" />
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="450dp" />
 
     <EditText
-        android:id="@+id/editTextNumberDecimal2"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:id="@+id/editTextText5"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:ems="10"
-        android:inputType="numberDecimal"
+        android:inputType="text"
         android:text="Carte de fidélité"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText3"
-        tools:layout_editor_absoluteX="79dp" />
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="510dp" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
+        android:background="@drawable/rounded_button_background"
+        android:textColor="@android:color/white"
+        android:text="Button" />
 
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrier"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="top"
-        app:constraint_referenced_ids="textView,editTextText,editTextTextEmailAddress,editTextText2,editTextText3,editTextTextPostalAddress,editTextNumberDecimal2,editTextNumberDecimal" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
