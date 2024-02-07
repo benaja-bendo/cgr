@@ -3,4 +3,12 @@
     <string name="cr_ation_de_compte">Création de compte</string>
     <string name="remplir_le_formulaire_manuellement">Remplir le formulaire manuellement</string>
     <string name="scan_qr_code">Scan QR Code</string>
+    <string name="create_compte">cree</string>
+    <string name="carte_de_fid_lit">Carte de fidélité</string>
+    <string name="ville">Ville</string>
+    <string name="code_postal">Code postal</string>
+    <string name="adresse">Adresse</string>
+    <string name="email">Email</string>
+    <string name="pr_nom">Prénom</string>
+    <string name="nom">Nom</string>
 </resources>
