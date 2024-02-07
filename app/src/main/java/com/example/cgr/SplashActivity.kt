@@ -7,12 +7,14 @@ import android.os.Handler
 import android.os.Looper
 
 class SplashActivity : AppCompatActivity() {
+
+    private val SPLASH_TIME_OUT: Long = 3000
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
         Handler(Looper.getMainLooper()).postDelayed(Runnable {
             startActivity(Intent(this,MainActivity::class.java))
             finish()
-        },2500)
+        },SPLASH_TIME_OUT)
     }
 }

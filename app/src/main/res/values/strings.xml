@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">CGR</string>
+    <string name="cr_ation_de_compte">Création de compte</string>
+    <string name="remplir_le_formulaire_manuellement">Remplir le formulaire manuellement</string>
+    <string name="scan_qr_code">Scan QR Code</string>
 </resources>
