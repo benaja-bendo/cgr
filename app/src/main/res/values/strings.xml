@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CGR</string>
+    <string name="user_greeting">Bonjour Utilisateur</string>
 </resources>
