@@ -32,6 +32,16 @@
                 android:value=".MainActivity" />
         </activity>
         <activity
+            android:name=".AccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BaseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserAccountActivity"
+            android:label="User Account"/>
+        <activity
+            android:name=".MainActivity"
             android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
