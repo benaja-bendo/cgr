@@ -1,5 +1,16 @@
 <resources>
     <string name="app_name">CGR</string>
+    <string name="txtTitle">CGR</string>
+    <string name="txtUpdate">Save updates</string>
+    <string name="txtUserAccount">User Account</string>
+    <string name="txtName">Name</string>
+    <string name="txtLastName">Last Name</string>
+    <string name="txtEmail">Email</string>
+    <string name="txtAddress">Address</string>
+    <string name="txtZipCode">Zip Code</string>
+    <string name="txtCity">City</string>
+    <string name="txtLoyaltyCard">Loyalty Card</string>
+    <string name="buttonBack">Back</string>
     <string name="txtFilms">Films</string>
     <string name="txtSalles">Salles</string>
     <string name="txtCarte">Carte</string>
