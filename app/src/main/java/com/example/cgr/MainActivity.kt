@@ -1,7 +1,9 @@
 package com.example.cgr
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.result.contract.ActivityResultContracts
@@ -9,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var sharedPreferences: SharedPreferences
     private val resultLancher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == Activity.RESULT_OK) {
@@ -23,6 +26,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        loadData()
 
         val scanQRButton = findViewById<Button>(R.id.scanQRButton)
         val formManuelButton = findViewById<Button>(R.id.fillFormButton)
@@ -37,6 +41,18 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+    }
+
+    private fun loadData() {
+        sharedPreferences = getSharedPreferences("user_info", Context.MODE_PRIVATE)
+        val name = sharedPreferences.getString("name", "")
+        println("sharedPreferences.contains(\"name\")")
+        println(sharedPreferences.contains("name"))
+        if (name != "") {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
     private fun startScanQRActivity() {
