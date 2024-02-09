@@ -28,6 +28,9 @@
     <string name="txtPanier">Panier</string>
     <string name="txtDescription">Description :</string>
     <string name="txtDuree">Durée :</string>
+    <string name="txtAjouterPanier">Ajouter au panier</string>
+    <string name="txtMinutes">minutes</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
