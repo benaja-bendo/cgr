@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">CGR</string>
+    <string name="txtFilms">Films</string>
+    <string name="txtSalles">Salles</string>
+    <string name="txtCarte">Carte</string>
+    <string name="txtPanier">Panier</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="user_greeting">Bonjour Utilisateur</string>
 </resources>
