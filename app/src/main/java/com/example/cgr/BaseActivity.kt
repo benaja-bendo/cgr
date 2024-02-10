@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toolbar
 
 
 open class BaseActivity : AppCompatActivity() {
@@ -58,5 +59,6 @@ open class BaseActivity : AppCompatActivity() {
             textViewNature.text = title
         }
     }
+
 
 }

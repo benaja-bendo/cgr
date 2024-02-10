@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+//import androidx.appcompat.widget.Toolbar
 
 //import kotlinx.android.synthetic.main.activity_user_account.*
 
@@ -18,6 +19,7 @@ class UserAccountActivity : BaseActivity() {
 
         showBack()
         setHeaderTitle(getString(R.string.txtUserAccount))
+
 
         val editTextTextLastName=findViewById<EditText>(R.id.editTextTextLastName)
         val editTextTextName=findViewById<EditText>(R.id.editTextTextName)

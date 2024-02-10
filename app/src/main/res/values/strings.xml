@@ -11,4 +11,5 @@
     <string name="txtCity">City</string>
     <string name="txtLoyaltyCard">Loyalty Card</string>
     <string name="buttonBack">Back</string>
+    <string name="txtAccount">Account</string>
 </resources>

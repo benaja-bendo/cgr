@@ -1,76 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".UserAccountActivity">
+    <LinearLayout
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UserAccountActivity">
 
-        <include
-            layout="@layout/activity_base"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <include
+                layout="@layout/activity_base"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-        <ScrollView
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
 
             <EditText
-                style="@style/EditTextLastName"
                 android:id="@+id/editTextTextLastName"
-                android:layout_height="wrap_content"
+                style="@style/EditTextLastName"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="@string/txtLastName"
-                android:inputType="text"/>
+                android:inputType="text" />
 
             <EditText
-                style="@style/EditTextName"
                 android:id="@+id/editTextTextName"
-                android:layout_height="wrap_content"
+                style="@style/EditTextName"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="@string/txtName"
-                android:inputType="text"/>
+                android:inputType="text" />
 
             <EditText
-                style="@style/EditTextEmail"
                 android:id="@+id/editTextTextEmail"
-                android:layout_height="wrap_content"
+                style="@style/EditTextEmail"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="@string/txtEmail"
-                android:inputType="text"/>
+                android:inputType="text" />
 
             <EditText
-                style="@style/EditTextAddress"
                 android:id="@+id/editTextTextAddress"
-                android:layout_height="wrap_content"
+                style="@style/EditTextAddress"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="@string/txtAddress"
-                android:inputType="text"/>
+                android:inputType="text" />
 
             <EditText
-                style="@style/EditTextZipCode"
                 android:id="@+id/editTextTextZipCode"
-                android:layout_height="wrap_content"
+                style="@style/EditTextZipCode"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="@string/txtZipCode"
-                android:inputType="text"/>
+                android:inputType="text" />
 
             <EditText
-                style="@style/EditTextCity"
                 android:id="@+id/editTextTextCity"
-                android:layout_height="wrap_content"
+                style="@style/EditTextCity"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="@string/txtCity"
-                android:inputType="text"/>
+                android:inputType="text" />
+
+            <!-- TextViewTitle -->
 
             <Button
                 android:id="@+id/buttonUpdate"
                 android:layout_width="200dp"
-                android:layout_gravity="center_horizontal"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginTop="150dp"
                 android:text="@string/txtUpdate"/>
-        </ScrollView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
 </LinearLayout>
