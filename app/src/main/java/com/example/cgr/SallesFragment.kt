@@ -1,10 +1,29 @@
 package com.example.cgr
 
+import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.cgr.salles.Salle
+import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.LatLngBounds
+import com.google.android.gms.maps.model.MarkerOptions
+import okhttp3.CacheControl
+import okhttp3.Call
+import okhttp3.Callback
+import okhttp3.OkHttpClient
+import okhttp3.Request
+import okhttp3.Response
+import org.json.JSONObject
+import java.io.IOException
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -21,6 +40,14 @@ class SallesFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    val salles = arrayListOf<Salle>()
+    val okHttpClient: OkHttpClient = OkHttpClient.Builder().build()
+    val mRequestUrl = "https://ugarit-online.000webhostapp.com/epsi/films/salles.json"
+    val request = Request.Builder().url(mRequestUrl).get().cacheControl(CacheControl.FORCE_NETWORK).build()
+    lateinit var googleMap: GoogleMap
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -33,9 +60,89 @@ class SallesFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_salles, container, false)
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment?
+        mapFragment?.getMapAsync { googleMap ->
+            okHttpClient.newCall(request).enqueue(object : Callback {
+                override fun onFailure(call: Call, e: IOException) {
+                    e.printStackTrace()
+                }
+
+                override fun onResponse(call: Call, response: Response) {
+                    val data = response.body?.string()
+                    if (data != null) {
+                        val jsonSalles = JSONObject(data)
+                        val items = jsonSalles.getJSONArray("salles")
+
+                        for (i in 0 until items.length()) {
+                            val salle = items.getJSONObject(i)
+                            val id = salle.optString("id", "")
+                            val name = salle.optString("name", "Unknown")
+                            val address1 = salle.optString("address1", "Unknown")
+                            val address2 = salle.optString("address2", "Unknown")
+                            val city = salle.optString("city", "Unknown")
+                            val lat = salle.optDouble("latitude", 0.0)
+                            val lng = salle.optDouble("longitude", 0.0)
+                            val parkingInfo = salle.optString("parkingInfo", "Unknown")
+                            val description = salle.optString("description", "Unknown")
+                            val publicTransport = salle.optString("publicTransport", "Unknown")
+
+
+                            val salleObj = Salle(id, name, address1, address2, city, lat, lng, parkingInfo, description, publicTransport)
+                            salles.add(salleObj)
+
+                            val originalMarkerBitmap = BitmapFactory.decodeResource(resources, R.drawable.cinema_marker)
+
+                            val width = 50
+                            val height = 50
+
+                            val scaledMarkerBitmap = Bitmap.createScaledBitmap(originalMarkerBitmap, width, height, false)
+
+                            val markerOptions = MarkerOptions()
+                                .position(LatLng(lat, lng))
+                                .title(name)
+                                .icon(BitmapDescriptorFactory.fromBitmap(scaledMarkerBitmap))
+
+
+
+                            activity?.runOnUiThread {
+                                val initialLocation = LatLng(48.8566, 2.3522)
+
+                                googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(initialLocation,
+                                    5F
+                                ))
+                                googleMap.addMarker(markerOptions)
+
+                                googleMap.setOnMarkerClickListener { clickedMarker ->
+                                    val clickedSalle = salles.find { it.name == clickedMarker.title }
+                                    if (clickedSalle != null) {
+                                        val intent = Intent(activity, SalleDetailActivity::class.java).apply {
+                                            putExtra("nameSalle", clickedSalle.name)
+                                            putExtra("address1", clickedSalle.address1)
+                                            putExtra("address2", clickedSalle.address2)
+                                            putExtra("descriptionSalle", clickedSalle.description)
+                                            putExtra("parkingInfo", clickedSalle.parkingInfo)
+                                            putExtra("publicTransport", clickedSalle.publicTransport)
+                                        }
+                                        startActivity(intent)
+                                        true
+                                    } else {
+                                        false
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            })
+        }
+    }
+
 
     companion object {
         /**

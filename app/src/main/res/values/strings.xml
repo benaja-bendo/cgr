@@ -30,6 +30,8 @@
     <string name="txtDuree">Durée :</string>
     <string name="txtAjouterPanier">Ajouter au panier</string>
     <string name="txtMinutes">minutes</string>
+    <string name="txtParkingInfo">Parking info :</string>
+    <string name="txtTransport">Transport :</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->
