@@ -29,12 +29,14 @@
             android:layout_height="match_parent"
             style="@style/TextTabbar"
             android:text="@string/txtFilms"/>
+
         <TextView
             android:id="@+id/textViewSalles"
+            style="@style/TextTabbar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            style="@style/TextTabbar"
-            android:text="@string/txtSalles"/>
+            android:text="@string/txtSalles" />
+
         <TextView
             android:id="@+id/textViewCarte"
             style="@style/TextTabbar"

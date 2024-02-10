@@ -1,10 +1,16 @@
 package com.example.cgr
 
+import android.content.Context
+import android.graphics.BitmapFactory
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import okhttp3.OkHttpClient
+import okhttp3.Request
+import java.io.IOException
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -21,6 +27,13 @@ class CarteFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private lateinit var mContext: Context
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        mContext = context
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -33,8 +46,35 @@ class CarteFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_carte, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val imageViewQRCode = view.findViewById<ImageView>(R.id.imageViewQRCode)
+
+        imageViewQRCode.setImageResource(R.drawable.qrCode)
+
+        val okHttpClient: okhttp3.OkHttpClient = okhttp3.OkHttpClient.Builder().build()
+        val request = okhttp3.Request.Builder().url(mRequestUrl).build()
+
+
+        okHttpClient.newCall(request).enqueue(object : Callback {
+            override fun onFailure(call: Call, e: IOException) {
+                // Gestion des erreurs lors de l'échec de la requête
+            }
+
+            override fun onResponse(call: Call, response: Response) {
+                val inputStream = response.body?.byteStream()
+                if (inputStream != null) {
+                    val bitmap = BitmapFactory.decodeStream(inputStream)
+                    requireActivity().runOnUiThread {
+                        imageViewQRCode.setImageBitmap(bitmap)
+                    }
+                }
+            }
+        })
     }
 
     companion object {
