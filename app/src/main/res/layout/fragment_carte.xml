@@ -9,8 +9,9 @@
         android:id="@+id/imageViewQRCode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/qrCode"
-        android:layout_gravity="center"/>
+        android:src="@drawable/capture_d_cran"
+        android:layout_gravity="center"
+        android:importantForAccessibility="no" />
 
 
     <!-- TODO: Update blank fragment layout -->

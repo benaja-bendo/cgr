@@ -8,8 +8,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import okhttp3.Call
+import okhttp3.Callback
 import okhttp3.OkHttpClient
 import okhttp3.Request
+import okhttp3.Response
 import java.io.IOException
 
 // TODO: Rename parameter arguments, choose names that match
@@ -54,7 +57,7 @@ class CarteFragment : Fragment() {
 
         val imageViewQRCode = view.findViewById<ImageView>(R.id.imageViewQRCode)
 
-        imageViewQRCode.setImageResource(R.drawable.qrCode)
+        imageViewQRCode.setImageResource(R.drawable.capture_d_cran)
 
         val okHttpClient: okhttp3.OkHttpClient = okhttp3.OkHttpClient.Builder().build()
         val request = okhttp3.Request.Builder().url(mRequestUrl).build()
