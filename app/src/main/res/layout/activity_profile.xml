@@ -19,8 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="55dp"
-            tools:ignore="UselessParent">
+            android:padding="55dp">
 
             <TextView
                 android:id="@+id/headerTextView"
@@ -29,7 +28,7 @@
                 android:layout_marginStart="25dp"
                 android:layout_marginBottom="25dp"
                 android:gravity="center"
-                android:text="@string/cr_ation_de_compte"
+                android:text="@string/profile_de_l_utilisateur"
                 android:textColor="@android:color/holo_blue_dark"
                 android:textSize="25sp" />
 
@@ -95,6 +94,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/create_compte"
+                android:textColor="@android:color/white" />
+            <Button
+                android:id="@+id/deleteAccountButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/delete_compte"
                 android:textColor="@android:color/white" />
 
         </LinearLayout>

@@ -6,8 +6,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@color/holo_red_light"
-        >
+        android:background="@color/holo_red_light">
         <TextView
             android:id="@+id/textViewTitle"
             android:layout_width="wrap_content"

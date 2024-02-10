@@ -1,7 +1,9 @@
 package com.example.cgr
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageButton
 import android.widget.TextView
 
 class HomeActivity : AppCompatActivity() {
@@ -14,6 +16,13 @@ class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+
+        val buttonProfile = findViewById<ImageButton>(R.id.imageButtonProfile)
+        buttonProfile.setOnClickListener {
+            val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         val films = findViewById<TextView>(R.id.textViewFilms)
         val salles = findViewById<TextView>(R.id.textViewSalles)
