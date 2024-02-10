@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include
+        layout="@layout/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:id="@+id/imageViewGraphicUrl"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"/>
+
+    <LinearLayout
+        android:layout_margin="20dp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Description :"
+            android:id="@+id/textViewDescriptionLabel"
+            style="@style/TextViewFilm" />
+        <TextView
+            android:text="test"
+            android:id="@+id/textViewDescription"
+            style="@style/TextViewFilm"
+            android:layout_marginLeft="10dp"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_margin="20dp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="@string/txtDuree"
+            android:id="@+id/textViewDurationLabel"
+            style="@style/TextViewFilm"/>
+        <TextView
+            android:text="test"
+            android:id="@+id/textViewRunTime"
+            style="@style/TextViewFilm"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:text="@string/txtMinutes"
+            android:id="@+id/textViewUnite"
+            style="@style/TextViewFilm"
+            android:layout_marginLeft="5dp"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnAjoutPanier"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/txtAjouterPanier"
+        android:textColor="@android:color/white"
+        android:textSize="15dp"/>
+</LinearLayout>
+
