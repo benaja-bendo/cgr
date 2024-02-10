@@ -51,6 +51,6 @@ class FormManuelActivity : AppCompatActivity() {
         Handler(Looper.getMainLooper()).postDelayed({
             startActivity(intent)
             finish()
-        }, 2000)
+        }, 1000)
     }
 }
