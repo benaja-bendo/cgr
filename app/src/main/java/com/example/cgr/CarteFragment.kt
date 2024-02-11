@@ -8,12 +8,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import okhttp3.Call
-import okhttp3.Callback
-import okhttp3.OkHttpClient
-import okhttp3.Request
-import okhttp3.Response
-import java.io.IOException
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -59,25 +53,6 @@ class CarteFragment : Fragment() {
 
         imageViewQRCode.setImageResource(R.drawable.capture_d_cran)
 
-        val okHttpClient: okhttp3.OkHttpClient = okhttp3.OkHttpClient.Builder().build()
-        val request = okhttp3.Request.Builder().url(mRequestUrl).build()
-
-
-        okHttpClient.newCall(request).enqueue(object : Callback {
-            override fun onFailure(call: Call, e: IOException) {
-                // Gestion des erreurs lors de l'échec de la requête
-            }
-
-            override fun onResponse(call: Call, response: Response) {
-                val inputStream = response.body?.byteStream()
-                if (inputStream != null) {
-                    val bitmap = BitmapFactory.decodeStream(inputStream)
-                    requireActivity().runOnUiThread {
-                        imageViewQRCode.setImageBitmap(bitmap)
-                    }
-                }
-            }
-        })
     }
 
     companion object {
