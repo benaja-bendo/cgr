@@ -11,7 +11,7 @@ class HomeActivity : AppCompatActivity() {
     val filmsFragment= FilmsFragment.newInstance("","")
     val sallesFragment= SallesFragment.newInstance("","")
     val carteFragment= CarteFragment.newInstance("","")
-    val panierFragment= CarteFragment.newInstance("","")
+    val panierFragment= PanierFragment.newInstance("","")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

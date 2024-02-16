@@ -23,10 +23,14 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+    override fun onStart() {
+        super.onStart()
+        loadData()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        loadData()
 
         val scanQRButton = findViewById<Button>(R.id.scanQRButton)
         val formManuelButton = findViewById<Button>(R.id.fillFormButton)
