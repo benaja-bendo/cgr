@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -11,32 +12,24 @@
 
         <ImageView
             android:id="@+id/imageViewLogo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
             android:layout_marginStart="10dp"
             android:layout_centerVertical="true"
-            android:src="@drawable/cgr_2013_logo" />
+            android:src="@drawable/cgr_2013_logo"
+            android:contentDescription="@string/app_name" />
 
-        <TextView
-            android:id="@+id/textViewUsername"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/imageViewLogo"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="10dp"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:textStyle="bold" />
 
         <ImageButton
             android:id="@+id/imageButtonProfile"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="10dp"
             android:layout_centerVertical="true"
             android:background="@color/cardview_dark_background"
-            android:src="@drawable/materialsymbolsaccountcircle" />
+            android:src="@drawable/materialsymbolsaccountcircle"
+            app:tint="@android:color/white" />
 
     </RelativeLayout>
 

@@ -55,29 +55,6 @@ class CarteFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // val imageViewQRCode = view.findViewById<ImageView>(R.id.imageViewQRCode)
-
-        // imageViewQRCode.setImageResource(R.drawable.capture_d_cran)
-
-        // val okHttpClient: okhttp3.OkHttpClient = okhttp3.OkHttpClient.Builder().build()
-        // val request = okhttp3.Request.Builder().url(mRequestUrl).build()
-
-
-        // okHttpClient.newCall(request).enqueue(object : Callback {
-        //     override fun onFailure(call: Call, e: IOException) {
-        //         // Gestion des erreurs lors de l'échec de la requête
-        //     }
-
-        //     override fun onResponse(call: Call, response: Response) {
-        //         val inputStream = response.body?.byteStream()
-        //         if (inputStream != null) {
-        //             val bitmap = BitmapFactory.decodeStream(inputStream)
-        //             requireActivity().runOnUiThread {
-        //                 imageViewQRCode.setImageBitmap(bitmap)
-        //             }
-        //         }
-        //     }
-        // })
     }
 
     companion object {
